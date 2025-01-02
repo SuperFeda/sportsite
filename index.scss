@@ -44,11 +44,11 @@
     }
 
     input {
-        min-width: 200px;
+        min-width: 199px;
     }
 
     select {
-        min-width: 200px;
+        min-width: 199px;
     }
 }
 
@@ -80,9 +80,9 @@
 
 
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
     .input-box button {
-        min-width: 220px;
+        min-width: 210px;
     }
 }
 
