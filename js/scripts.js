@@ -60,7 +60,7 @@ function genResults(bmr, weight) {
         <div class="results-card">
             <h2 class="results-title">Суточная норма:</h2>
             <p class="results-p">Калории: ${Math.round(bmr)}</p>
-            <p class="results-p">Белки: ${Math.round(weight*0.8)} г. (для обычного человека)  ///  ${Math.round(weight*1.55)} г. (для спортсменов)</p>
+            <p class="results-p">Белки: ${Math.round(weight*0.8)} г. (для обычного человека); ${Math.round(weight*1.55)} г. (для спортсменов)</p>
             <p class="results-p">Жиры: ${Math.round((bmr*0.3)/9)} г.</p>
             <p class="results-p">Углеводы: ${Math.round((bmr*0.55)/4)} г.</p>
         </div>

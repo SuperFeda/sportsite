@@ -36,13 +36,13 @@
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 .input-box button {
-  min-width: 370px;
+  min-width: 415px;
 }
 .input-box input {
-  min-width: 235px;
+  min-width: 200px;
 }
 .input-box select {
-  min-width: 235px;
+  min-width: 200px;
 }
 
 .results {
