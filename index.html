@@ -17,7 +17,7 @@
         <div class="container">
             <div id="box">
 
-                <main>
+                <main id="main">
                     <div class="top-content">
                         <div class="title-content">
                             <div>
@@ -29,55 +29,18 @@
                             <input class="input-field" id="age-input" placeholder="Ваш возраст..." min="0" type="number" />
                             <input class="input-field" id="weight-input" placeholder="Ваш вес (кг)..." min="0" type="number" />
                             <input class="input-field" id="height-input" placeholder="Ваш рост (см)..." min="0" type="number" />
-                            <input class="input-field" id="sex-input" placeholder="Ваш пол..." list="sex-list" />
+<!--                            <input class="input-field" id="sex-input" placeholder="Ваш пол..." list="sex-list" />-->
+                            <select class="input-field" id="sex-input">
+                                <option value="man">Мужской</option>
+                                <option value="woman">Женский</option>
+                            </select>
+                            <select class="input-field" id="active-input">
+                                <option value="" disabled selected hidden>Тип активности</option>
+                                <option value="1.2">Малоподвижный образ жизни</option>
+                                <option value="1.55">Умеренная активность</option>
+                                <option value="1.9">Высокая активность</option>
+                            </select>
                             <button class="button" id="calc-btn">Высчитать</button>
-
-                            <datalist id="sex-list">
-                                <option value="Мужской"></option>
-                                <option value="Женский"></option>
-                            </datalist>
-                        </div>
-                    </div>
-
-                    <div class="results">
-                        <h2 class="results-title">Результаты вычислений:</h2>
-                        <div class="card-list">
-                            <div class="card">
-                                <h3 class="card-title">Суточная норма:</h3>
-                                <div class="card-content">
-                                    <p class="card-p">ккал: </p>
-                                    <p class="card-p">белки: </p>
-                                    <p class="card-p">жиры: </p>
-                                    <p class="card-p">углеводы: </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <h3 class="card-title">Функции БЖУ:</h3>
-                                <div class="card-content">
-                                    <p class="card-p">Б: </p>
-                                    <p class="card-p">Ж: </p>
-                                    <p class="card-p">У: </p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <h3 class="card-title">Что способствует:</h3>
-                                <div class="card-content">
-                                    <p class="card-p">Похудению:</p>
-                                    <p class="card-p">Набору веса:</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <h3 class="card-title">Витамины:</h3>
-                                <div class="card-content">
-                                    <p class="card-p">....</p>
-                                </div>
-                            </div>
-                            <div class="card">
-                                <h3 class="card-title">Виды тренеровок:</h3>
-                                <div class="card-content">
-                                    <p class="card-p">...</p>
-                                </div>
-                            </div>
                         </div>
                     </div>
                 </main>

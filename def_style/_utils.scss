@@ -21,15 +21,17 @@ $default-padding: 5px 15px;
     padding: $default-padding;
     border-radius: $default-border-radius;
     border: $default-border;
-    background: #4174ed;
+    background: var(--brand-blue);
     color: white;
     transition: 0.3s all;
     outline: none;
+    cursor: pointer;
+    font-size: 18px;
 
     @include elementActive();
 
     &:hover {
-        background: #326aec;
+        background: var(--brand-dark-blue);
     }
 }
 
