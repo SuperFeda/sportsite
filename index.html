@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <meta property="og:title" content="ЗОЖ" />
+        <meta property="og:description" content="" />
+        <title>Главная</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+        <link rel="stylesheet" href="./style.css" />
+        <link rel="stylesheet" href="./index.css" />
+    </head>
+    <body>
+
+        <div class="container">
+            <div id="box">
+
+                <main>
+                    <div class="top-content">
+                        <div class="title-content">
+                            <div>
+                                <h1 class="site-title">ЗОЖ</h1>
+                            </div>
+                            <p class="description">Супер описание </p>
+                        </div>
+                        <div class="input-box">
+                            <input class="input-field" id="age-input" placeholder="Ваш возраст..." min="0" type="number" />
+                            <input class="input-field" id="weight-input" placeholder="Ваш вес (кг)..." min="0" type="number" />
+                            <input class="input-field" id="height-input" placeholder="Ваш рост (см)..." min="0" type="number" />
+                            <input class="input-field" id="sex-input" placeholder="Ваш пол..." list="sex-list" />
+                            <button class="button" id="calc-btn">Высчитать</button>
+
+                            <datalist id="sex-list">
+                                <option value="Мужской"></option>
+                                <option value="Женский"></option>
+                            </datalist>
+                        </div>
+                    </div>
+
+                    <div class="results">
+                        <h2 class="results-title">Результаты вычислений:</h2>
+                        <div class="card-list">
+                            <div class="card">
+                                <h3 class="card-title">Суточная норма:</h3>
+                                <div class="card-content">
+                                    <p class="card-p">ккал: </p>
+                                    <p class="card-p">белки: </p>
+                                    <p class="card-p">жиры: </p>
+                                    <p class="card-p">углеводы: </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="card-title">Функции БЖУ:</h3>
+                                <div class="card-content">
+                                    <p class="card-p">Б: </p>
+                                    <p class="card-p">Ж: </p>
+                                    <p class="card-p">У: </p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="card-title">Что способствует:</h3>
+                                <div class="card-content">
+                                    <p class="card-p">Похудению:</p>
+                                    <p class="card-p">Набору веса:</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="card-title">Витамины:</h3>
+                                <div class="card-content">
+                                    <p class="card-p">....</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <h3 class="card-title">Виды тренеровок:</h3>
+                                <div class="card-content">
+                                    <p class="card-p">...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+
+            </div>
+        </div>
+
+    </body>
+
+    <script src="./js/scripts.js"></script>
+
+</html>

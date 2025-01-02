@@ -1,0 +1,46 @@
+@import "mixin";
+
+.no-display {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    margin: -1px !important;
+    border: 0 !important;
+    padding: 0 !important;
+    white-space: nowrap !important;
+    clip-path: inset(100%) !important;
+    clip: rect(0 0 0 0) !important;
+    overflow: hidden !important;
+}
+
+$default-border-radius: 10px;
+$default-border: 2px solid transparent;
+$default-padding: 5px 15px;
+
+.button {
+    padding: $default-padding;
+    border-radius: $default-border-radius;
+    border: $default-border;
+    background: #4174ed;
+    color: white;
+    transition: 0.3s all;
+    outline: none;
+
+    @include elementActive();
+
+    &:hover {
+        background: #326aec;
+    }
+}
+
+.input-field {
+    padding: $default-padding;
+    border-radius: $default-border-radius;
+    border: $default-border;
+    background: white;
+    transition: 0.3s all;
+
+    &::placeholder {
+        color: #5e5e5e;
+    }
+}
