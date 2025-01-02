@@ -86,4 +86,10 @@
     }
 }
 
+@media (max-width: 210px) {
+    .input-box button, .input-box input, .input-box select {
+        min-width: 110px;
+    }
+}
+
 

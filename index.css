@@ -76,5 +76,10 @@
     min-width: 210px;
   }
 }
+@media (max-width: 210px) {
+  .input-box button, .input-box input, .input-box select {
+    min-width: 110px;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */
