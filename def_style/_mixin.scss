@@ -5,7 +5,7 @@
 
 @mixin elementActive() {
     &:active { 
-        transform: scale(0.96);
+        transform: scale(0.975);
     }
 }
 

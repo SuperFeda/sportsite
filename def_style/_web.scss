@@ -16,12 +16,6 @@
     background-color: var(--brand-dark-blue);
 }
 
-::-webkit-scrollbar-button:vertical:start:decrement { background-color: var(--brand-blue); }
-::-webkit-scrollbar-button:vertical:end:increment { background-color: var(--brand-blue); }
-::-webkit-scrollbar-button:horizontal:start:decrement { background-color: var(--brand-blue); }
-::-webkit-scrollbar-button:horizontal:end:increment { background-color: var(--brand-blue); }
-
-
 @media (max-width: 767px) {
     ::-webkit-scrollbar {
         width: 5px; /* ширина для вертикального скролла */

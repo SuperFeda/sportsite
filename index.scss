@@ -3,12 +3,12 @@
 @import "def_style/mixin";
 
 .top-content {
-    margin-top: 7%;
+    margin-top: 5.5%;
 }
 
 .site-title {
     font-family: var(--unbounded);
-    font-size: 55px;
+    font-size: 58px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,20 +35,23 @@
 
     button, input, select {
         flex: 1;
-        min-height: 65px;
+        min-height: 62px;
         @include shadow();
     }
 
     button {
         min-width: 415px;
+        font-size: 20px;
     }
 
     input {
         min-width: 199px;
+        font-size: 18px;
     }
 
     select {
         min-width: 199px;
+        font-size: 18px;
     }
 }
 
@@ -78,6 +81,13 @@
     font-size: 17px;
 }
 
+@media (max-width: 640px) {
+    .input-box {
+        button, input, select {
+            min-height: 52px;
+        }
+    }
+}
 
 
 @media (max-width: 430px) {

@@ -21,8 +21,7 @@ html, body {
 }
 
 body {
-    position: relative;
-    background: var(--bg-color);
+    background-color: var(--bg-color);
 }
 
 .container {
@@ -45,6 +44,21 @@ main {
     margin-right: 7%;
     margin-left: 7%;
 }
+
+// скрытие стрелок у <input type="number" />
+/* Для Chrome, Safari и Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Для Firefox */
+input[type=number] {
+    -moz-appearance: textfield;
+}
+/**/
+
 
 button {
     color: var(--text-color);

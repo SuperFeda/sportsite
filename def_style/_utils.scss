@@ -26,7 +26,6 @@ $default-padding: 5px 15px;
     transition: 0.3s all;
     outline: none;
     cursor: pointer;
-    font-size: 18px;
 
     @include elementActive();
 
@@ -41,8 +40,13 @@ $default-padding: 5px 15px;
     border: $default-border;
     background: white;
     transition: 0.3s all;
+    outline: 2px solid transparent;
 
     &::placeholder {
         color: #5e5e5e;
+    }
+
+    &:focus {
+        outline: 2px solid var(--brand-blue);
     }
 }

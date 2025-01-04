@@ -19,8 +19,7 @@ html, body {
 }
 
 body {
-  position: relative;
-  background: var(--bg-color);
+  background-color: var(--bg-color);
 }
 
 .container {
@@ -45,6 +44,19 @@ main {
   margin-left: 7%;
 }
 
+/* Для Chrome, Safari и Edge */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/**/
 button {
   color: var(--text-color);
 }
@@ -146,11 +158,11 @@ svg * {
 }
 :root {
   --text-color: black;
-  --bg-color: #eaeaea;
-  --unbounded: "Unbounded", sans-serif;
-  --nunito: "Nunito";
+  --bg-color: #efefef;
   --brand-blue: #4174ed;
   --brand-dark-blue: #326aec;
+  --unbounded: "Unbounded", sans-serif;
+  --nunito: "Nunito";
 }
 
 .no-display {
@@ -175,10 +187,9 @@ svg * {
   transition: 0.3s all;
   outline: none;
   cursor: pointer;
-  font-size: 18px;
 }
 .button:active {
-  transform: scale(0.96);
+  transform: scale(0.975);
 }
 .button:hover {
   background: var(--brand-dark-blue);
@@ -190,9 +201,13 @@ svg * {
   border: 2px solid transparent;
   background: white;
   transition: 0.3s all;
+  outline: 2px solid transparent;
 }
 .input-field::placeholder {
   color: #5e5e5e;
+}
+.input-field:focus {
+  outline: 2px solid var(--brand-blue);
 }
 
 ::selection {
@@ -212,22 +227,6 @@ svg * {
 
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--brand-dark-blue);
-}
-
-::-webkit-scrollbar-button:vertical:start:decrement {
-  background-color: var(--brand-blue);
-}
-
-::-webkit-scrollbar-button:vertical:end:increment {
-  background-color: var(--brand-blue);
-}
-
-::-webkit-scrollbar-button:horizontal:start:decrement {
-  background-color: var(--brand-blue);
-}
-
-::-webkit-scrollbar-button:horizontal:end:increment {
-  background-color: var(--brand-blue);
 }
 
 @media (max-width: 767px) {
