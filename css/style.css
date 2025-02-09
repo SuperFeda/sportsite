@@ -251,6 +251,16 @@ svg * {
   display: inline-flex;
 }
 
+.back-to-index {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+.back-to-index span, .back-to-index svg {
+  display: inline-flex;
+}
+
 .header-button-list > * {
   display: inline-flex;
 }
@@ -303,6 +313,12 @@ svg * {
 }
 .header-button:hover {
   background: rgb(var(--brand-dark-blue));
+}
+
+@media (max-width: 575px) {
+  .back-to-index span {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

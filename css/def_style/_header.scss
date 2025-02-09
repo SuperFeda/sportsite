@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap');
+
+@import "mixin";
+
+#header {
+    position: sticky;
+    background: white;
+    padding: 7px 12px;
+    top: 9px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include shadow();
+
+    & > * {
+        display: inline-flex;
+    }
+}
+
+.back-to-index {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+
+    & span, svg {
+        display: inline-flex;
+    }
+}
+
+.header-button-list {
+    & > * {
+        display: inline-flex;
+    }
+}
+
+.navbar {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    right: 0;
+    left: 0;
+    top: 65px;
+    padding: 10px;
+    background: white;
+    border-radius: 10px;
+
+    @include shadow();
+}
+
+.navbar-url {
+    padding: 5px 12px;
+    border-radius: 9999px;
+    background: rgba(var(--brand-blue), 0.9);
+    color: white;
+    transition: all 0.25s;
+
+    @include elementActive();
+
+    &:hover {
+        background: rgba(var(--brand-dark-blue), 0.9);
+    }
+}
+
+.header-title {
+    font-size: 30px;
+    font-family: var(--unbounded);
+    font-weight: 600;
+}
+
+.header-button {
+    padding: 9px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgb(var(--brand-blue));
+    transition: all 0.35s;
+
+    @include elementActive();
+
+    &:hover {
+        background: rgb(var(--brand-dark-blue));
+    }
+}
+
+
+@media (max-width: 575px) {
+    .back-to-index span {
+        display: none;
+    }
+}

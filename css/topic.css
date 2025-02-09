@@ -1,0 +1,41 @@
+main {
+  max-width: 850px;
+  margin: 3% auto;
+}
+
+.text-box {
+  margin-left: 4%;
+  margin-right: 4%;
+  font-size: 18px;
+}
+.text-box > p:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.chapter {
+  margin-bottom: 5px;
+  font-size: 32px;
+  font-weight: bold;
+}
+.chapter:not(:first-child) {
+  margin-top: 18px;
+}
+
+.topic-img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 15px 0;
+}
+
+@media (max-width: 800px) {
+  .text-box {
+    margin-left: 0;
+    margin-right: 0;
+    font-size: 17px;
+  }
+  .chapter {
+    font-size: 26px;
+  }
+}
+
+/*# sourceMappingURL=topic.css.map */
