@@ -1,25 +1,25 @@
 ::selection {
-    background-color: var(--brand-dark-blue);
+    background-color: rgb(var(--brand-dark-blue));
     color: white;
 }
 
 ::-webkit-scrollbar {
-    width: 7px; /* ширина для вертикального скролла */
-    height: 7px; /* высота для горизонтального скролла */
+    width: 7px;
+    height: 7px;
     background-color: var(--bg-color);
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: var(--brand-blue);
+    background-color: rgb(var(--brand-blue));
 }
 ::-webkit-scrollbar-thumb:hover {
-    background-color: var(--brand-dark-blue);
+    background-color: rgb(var(--brand-dark-blue));
 }
 
 @media (max-width: 767px) {
     ::-webkit-scrollbar {
-        width: 5px; /* ширина для вертикального скролла */
-        height: 5px; /* высота для горизонтального скролла */
+        width: 5px;
+        height: 5px;
         background-color: var(--bg-color);
     }
 }

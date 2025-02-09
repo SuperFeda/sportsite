@@ -26,7 +26,7 @@ body {
 
 .container {
     @include elementCenterMargin();
-    max-width: 1200px;
+    max-width: 1000px;
     height: 100%;
     width: 100%;
 }
@@ -35,14 +35,14 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
 main {
     flex: 1 1 auto;
     margin-top: 15px;
     margin-bottom: 70px;
-    margin-right: 7%;
-    margin-left: 7%;
 }
 
 // скрытие стрелок у <input type="number" />
@@ -113,10 +113,6 @@ body,
 
 p {
     margin-block: 0;
-}
-
-p:where(:not([class]):not(:last-child)) {
-    margin-bottom: 17px;
 }
 
 img {

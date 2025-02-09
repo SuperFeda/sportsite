@@ -21,16 +21,16 @@ $default-padding: 5px 15px;
     padding: $default-padding;
     border-radius: $default-border-radius;
     border: $default-border;
-    background: var(--brand-blue);
+    background: rgb(var(--brand-blue));
     color: white;
-    transition: 0.3s all;
+    transition: 0.25s all;
     outline: none;
     cursor: pointer;
 
     @include elementActive();
 
     &:hover {
-        background: var(--brand-dark-blue);
+        background: rgb(var(--brand-dark-blue));
     }
 }
 
@@ -39,7 +39,7 @@ $default-padding: 5px 15px;
     border-radius: $default-border-radius;
     border: $default-border;
     background: white;
-    transition: 0.3s all;
+    transition: 0.25s all;
     outline: 2px solid transparent;
 
     &::placeholder {
@@ -47,6 +47,10 @@ $default-padding: 5px 15px;
     }
 
     &:focus {
-        outline: 2px solid var(--brand-blue);
+        outline: 2px solid rgb(var(--brand-blue));
+    }
+
+    &:invalid {
+        outline: 2px solid red;
     }
 }
