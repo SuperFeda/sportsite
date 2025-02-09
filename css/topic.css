@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 main {
   max-width: 850px;
   margin: 3% auto;
@@ -15,7 +16,8 @@ main {
 .chapter {
   margin-bottom: 5px;
   font-size: 32px;
-  font-weight: bold;
+  font-weight: 400;
+  font-family: var(--unbounded);
 }
 .chapter:not(:first-child) {
   margin-top: 18px;
