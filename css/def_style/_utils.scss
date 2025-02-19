@@ -38,12 +38,13 @@ $default-padding: 5px 15px;
     padding: $default-padding;
     border-radius: $default-border-radius;
     border: $default-border;
-    background: white;
+    background: rgb(var(--element-color-rgb));
     transition: 0.25s all;
     outline: 2px solid transparent;
+    color: var(--text-color);
 
     &::placeholder {
-        color: #5e5e5e;
+        color: #aeaeae;
     }
 
     &:focus {

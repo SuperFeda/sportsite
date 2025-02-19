@@ -4,15 +4,17 @@
 
 #header {
     position: sticky;
-    background: white;
+    background: rgba(var(--element-color-rgb), 0.7);
+    border: 1px solid rgba(var(--element-color-rgb), 1);
     padding: 7px 12px;
     top: 9px;
     border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @include shadow();
+    backdrop-filter: blur(7px);
+    -webkit-backdrop-filter: blur(7px);
+    z-index: 99999;
 
     & > * {
         display: inline-flex;
@@ -45,7 +47,7 @@
     left: 0;
     top: 65px;
     padding: 20px 15px;
-    background: white;
+    background: rgb(var(--element-color-rgb), 0.96);
     border-radius: 10px;
 
     @include shadow();

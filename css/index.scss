@@ -3,7 +3,7 @@
 @import "def_style/mixin";
 
 .top-content {
-    margin-top: 4.4%;
+    margin-top: 0.5%;
 }
 
 .site-title {
@@ -18,11 +18,21 @@
     font-size: 18px;
 }
 
-.top-content {
+.title-content {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
+    height: 225px;
+    overflow: hidden;
+    color: white;
+    border-radius: 25px;
+
+    & > * {
+        z-index: 2;
+    }
 }
 
 .input-box {
@@ -31,7 +41,6 @@
     gap: 10px;
     max-width: 100%;
     width: 100%;
-    margin-top: 40px;
 
     .button {
         min-width: 415px;
@@ -46,23 +55,21 @@
     .input-field, .button {
         flex: 1;
         min-height: 62px;
-
-        @include shadow();
     }
 }
 
 .results {
-    margin-top: max(6%, 36px);
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    gap: 18px;
+    gap: 15px;
 }
 
 .results-card {
     padding: 13px;
     border-radius: 10px;
-    border: 1px solid transparent;
-    background: white;
+    //border: 1px solid rgb(var(--element-border-color));
+    background: rgba(var(--element-color-rgb), 0.63);
     transition: 0.28s all;
     animation: card_spawn 1.2s;
 
@@ -72,6 +79,71 @@
         font-size: 17px;
     }
 }
+
+.results-title {
+    font-family: var(--unbounded);
+    margin-top: 2px;
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.result-element {
+    padding: 10px;
+    background: rgb(var(--element-color-rgb));
+    border-radius: 7px;
+    transition: all 0.35s;
+    min-width: 300px;
+
+    &:hover {
+        scale: 1.01;
+    }
+
+    & p {
+        margin-top: 7px;
+        font-size: 18px;
+    }
+}
+
+.title-with-svg {
+    display: flex;
+    gap: 6px;
+    font-size: 22px;
+
+    &[svg-right] {
+        & svg {
+            margin-left: auto;
+        }
+    }
+
+    & > * {
+        display: inline-flex;
+    }
+}
+
+.flex-results {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 7px;
+
+    & > * {
+        flex: 1;
+    }
+}
+
+.topic-link {
+    border: 2px solid rgb(var(--element-color-rgb));
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+        border-color: rgb(var(--brand-blue));
+        color: rgb(var(--brand-blue));
+    }
+}
+
 
 @keyframes card_spawn {
     from {
@@ -83,15 +155,15 @@
     }
 }
 
-.results-title {
-    font-family: var(--unbounded);
-    margin-top: 2px;
-    margin-bottom: 7px;
-}
+
 
 @media (max-width: 640px) {
     .input-field {
         min-height: 52px;
+    }
+
+    .result-element {
+        min-width: auto;
     }
 }
 

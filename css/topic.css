@@ -27,7 +27,7 @@ main {
   width: 100%;
   border-radius: 15px;
   margin: 15px 0;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+  filter: brightness(78%);
 }
 
 @media (max-width: 800px) {

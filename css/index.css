@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 .top-content {
-  margin-top: 4.4%;
+  margin-top: 0.5%;
 }
 
 .site-title {
@@ -15,11 +15,20 @@
   font-size: 18px;
 }
 
-.top-content {
+.title-content {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+  height: 225px;
+  overflow: hidden;
+  color: white;
+  border-radius: 25px;
+}
+.title-content > * {
+  z-index: 2;
 }
 
 .input-box {
@@ -28,7 +37,6 @@
   gap: 10px;
   max-width: 100%;
   width: 100%;
-  margin-top: 40px;
 }
 .input-box .button {
   min-width: 415px;
@@ -41,27 +49,81 @@
 .input-box .input-field, .input-box .button {
   flex: 1;
   min-height: 62px;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 
 .results {
-  margin-top: max(6%, 36px);
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 15px;
 }
 
 .results-card {
   padding: 13px;
   border-radius: 10px;
-  border: 1px solid transparent;
-  background: white;
+  background: rgba(var(--element-color-rgb), 0.63);
   transition: 0.28s all;
   animation: card_spawn 1.2s;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
 .results-card > p {
   font-size: 17px;
+}
+
+.results-title {
+  font-family: var(--unbounded);
+  margin-top: 2px;
+  margin-bottom: 10px;
+  font-size: 28px;
+}
+
+.result-element {
+  padding: 10px;
+  background: rgb(var(--element-color-rgb));
+  border-radius: 7px;
+  transition: all 0.35s;
+  min-width: 300px;
+}
+.result-element:hover {
+  scale: 1.01;
+}
+.result-element p {
+  margin-top: 7px;
+  font-size: 18px;
+}
+
+.title-with-svg {
+  display: flex;
+  gap: 6px;
+  font-size: 22px;
+}
+.title-with-svg[svg-right] svg {
+  margin-left: auto;
+}
+.title-with-svg > * {
+  display: inline-flex;
+}
+
+.flex-results {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 7px;
+}
+.flex-results > * {
+  flex: 1;
+}
+
+.topic-link {
+  border: 2px solid rgb(var(--element-color-rgb));
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+.topic-link:hover {
+  border-color: rgb(var(--brand-blue));
+  color: rgb(var(--brand-blue));
 }
 
 @keyframes card_spawn {
@@ -74,15 +136,12 @@
     opacity: 1;
   }
 }
-.results-title {
-  font-family: var(--unbounded);
-  margin-top: 2px;
-  margin-bottom: 7px;
-}
-
 @media (max-width: 640px) {
   .input-field {
     min-height: 52px;
+  }
+  .result-element {
+    min-width: auto;
   }
 }
 @media (max-width: 430px) {

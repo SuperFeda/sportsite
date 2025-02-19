@@ -2,14 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
 html, body {
   font-family: var(--nunito);
   height: 100%;
@@ -20,7 +12,7 @@ html, body {
 }
 
 body {
-  background-image: url("https://avatars.mds.yandex.net/i?id=6b289663de000c2f339592e4c5b7feab_l-8210620-images-thumbs&n=13");
+  background: rgb(var(--bg-color));
 }
 
 .container {
@@ -32,21 +24,23 @@ body {
 }
 
 #box {
-  border-radius: 15px;
-  padding: 8px;
-  background-color: rgba(var(--bg-color), 0.95);
   display: flex;
   flex-direction: column;
   min-height: 100%;
-  margin-top: 5px;
-  margin-bottom: 5px;
-  box-shadow: 0px 0px 25px black;
+  margin: 0 1%;
 }
 
 main {
   flex: 1 1 auto;
-  margin-top: 15px;
-  margin-bottom: 70px;
+  margin-bottom: 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 /* Для Chrome, Safari и Edge */
@@ -158,10 +152,11 @@ svg * {
   }
 }
 :root {
-  --text-color: black;
-  --bg-color: 239, 239, 239;
+  --text-color: white;
+  --bg-color: 17, 16, 19;
   --brand-blue: 65, 116, 237;
   --brand-dark-blue: 50, 106, 236;
+  --element-color-rgb: 27, 26, 28;
   --unbounded: "Unbounded", sans-serif;
   --nunito: "Nunito";
 }
@@ -200,12 +195,13 @@ svg * {
   padding: 5px 15px;
   border-radius: 10px;
   border: 2px solid transparent;
-  background: white;
+  background: rgb(var(--element-color-rgb));
   transition: 0.25s all;
   outline: 2px solid transparent;
+  color: var(--text-color);
 }
 .input-field::placeholder {
-  color: #5e5e5e;
+  color: #aeaeae;
 }
 .input-field:focus {
   outline: 2px solid rgb(var(--brand-blue));
@@ -242,14 +238,17 @@ svg * {
 }
 #header {
   position: sticky;
-  background: white;
+  background: rgba(var(--element-color-rgb), 0.7);
+  border: 1px solid rgba(var(--element-color-rgb), 1);
   padding: 7px 12px;
   top: 9px;
   border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  z-index: 99999;
 }
 #header > * {
   display: inline-flex;
@@ -278,7 +277,7 @@ svg * {
   left: 0;
   top: 65px;
   padding: 20px 15px;
-  background: white;
+  background: rgb(var(--element-color-rgb), 0.96);
   border-radius: 10px;
   box-shadow: 0 0 8px rgba(0, 0, 0, 0.15);
 }
