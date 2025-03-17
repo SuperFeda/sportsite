@@ -21,13 +21,20 @@ document.getElementById("close-burger-menu").addEventListener("click", () => {
 
 document.addEventListener('click', (event) => {
     if (!burger_menu.contains(event.target) && !burger_btn.contains(event.target) && main_tag.classList.contains("disable")) {
-        disableModal()
+        // disableModal()
     }
 })
 
 const disableModal = () => {
-    burger_menu.classList.toggle("no-display")
-    main_tag.classList.toggle("disable")
+    if (burger_menu.open) {
+        burger_menu.classList.add("modal-closing")
+        burger_menu.addEventListener('animationend', () => {
+            burger_menu.close();
+            burger_menu.classList.remove('modal-closing');
+        }, {once: 1});
+    } else {
+        burger_menu.showModal()
+    }
 }
 
 const generateBtn = () => {
