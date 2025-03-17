@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Unbounded:wght@200..900&display=swap");
 html, body {
   font-family: var(--nunito);
   height: 100%;
@@ -174,6 +175,11 @@ svg * {
   overflow: hidden !important;
 }
 
+.disable {
+  pointer-events: none;
+  overflow: hidden;
+}
+
 .button {
   padding: 5px 15px;
   border-radius: 10px;
@@ -187,8 +193,10 @@ svg * {
 .button:active {
   transform: scale(0.975);
 }
-.button:hover {
-  background: rgb(var(--brand-dark-blue));
+@media (hover: hover) {
+  .button:hover {
+    background: rgb(var(--brand-dark-blue));
+  }
 }
 
 .input-field {
@@ -208,6 +216,15 @@ svg * {
 }
 .input-field:invalid {
   outline: 2px solid red;
+}
+
+.burger-menu-navbar {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.burger-menu-navbar > a {
+  padding: 9px 14px;
 }
 
 ::selection {
@@ -321,6 +338,59 @@ svg * {
 @media (max-width: 575px) {
   .back-to-index span {
     display: none;
+  }
+}
+.modal {
+  background: rgb(var(--element-color-rgb));
+  border: none;
+  padding: 15px;
+  border-radius: 15px;
+  position: absolute;
+  z-index: 999;
+  box-shadow: 0px 0px 3000px 3000px rgba(0, 0, 0, 0.4);
+  transition: transform 0.65s;
+  transform: translateX(0);
+}
+.modal.no-display {
+  transform: translateX(120%);
+}
+
+#burger-menu {
+  height: calc(100dvh - 85px);
+  max-width: 280px;
+  width: 100%;
+  top: 75px;
+  right: 5px;
+}
+
+.modal-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-color);
+  font-family: var(--unbounded);
+  margin-bottom: 15px;
+}
+.modal-title > * {
+  display: inline-flex;
+}
+
+.close-modal-btn {
+  display: inline-flex;
+  background: rgba(237, 6, 6, 0.4);
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  transition: all 0.2s;
+}
+@media (hover: hover) {
+  .close-modal-btn:hover {
+    background: rgb(207, 4, 4);
+  }
+}
+@media (hover: none) {
+  .close-modal-btn:active {
+    background: rgb(207, 4, 4);
   }
 }
 

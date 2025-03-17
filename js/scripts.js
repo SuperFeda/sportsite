@@ -5,9 +5,30 @@ const weight_input= document.getElementById("weight-input")
 const height_input= document.getElementById("height-input")
 const active_input= document.getElementById("active-input")
 
-document.getElementById("burger-btn").addEventListener("click", () => {
-    document.getElementById("header-navbar").classList.toggle("no-display")
+const burger_menu = document.getElementById("burger-menu")
+const burger_btn = document.getElementById("burger-btn")
+
+burger_btn.addEventListener("click", () => {
+    if (window.matchMedia('(max-width:767px)').matches) {
+        disableModal()
+    } else {
+        document.getElementById("header-navbar").classList.toggle("no-display")
+    }
 })
+document.getElementById("close-burger-menu").addEventListener("click", () => {
+    disableModal()
+})
+
+document.addEventListener('click', (event) => {
+    if (!burger_menu.contains(event.target) && !burger_btn.contains(event.target) && main_tag.classList.contains("disable")) {
+        disableModal()
+    }
+})
+
+const disableModal = () => {
+    burger_menu.classList.toggle("no-display")
+    main_tag.classList.toggle("disable")
+}
 
 const generateBtn = () => {
     let age= document.getElementById("age-input")

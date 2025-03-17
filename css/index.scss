@@ -115,6 +115,8 @@
         }
     }
 
+    & svg {flex-shrink: 0;}
+
     & > * {
         display: inline-flex;
     }

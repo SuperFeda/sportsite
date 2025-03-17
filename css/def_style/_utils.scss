@@ -13,6 +13,11 @@
     overflow: hidden !important;
 }
 
+.disable {
+    pointer-events: none;
+    overflow: hidden;
+}
+
 $default-border-radius: 10px;
 $default-border: 2px solid transparent;
 $default-padding: 5px 15px;
@@ -28,8 +33,7 @@ $default-padding: 5px 15px;
     cursor: pointer;
 
     @include elementActive();
-
-    &:hover {
+    @include onlyHover {
         background: rgb(var(--brand-dark-blue));
     }
 }
@@ -53,5 +57,15 @@ $default-padding: 5px 15px;
 
     &:invalid {
         outline: 2px solid red;
+    }
+}
+
+.burger-menu-navbar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    & > a {
+        padding: 9px 14px;
     }
 }

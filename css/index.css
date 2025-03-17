@@ -100,6 +100,9 @@
 .title-with-svg[svg-right] svg {
   margin-left: auto;
 }
+.title-with-svg svg {
+  flex-shrink: 0;
+}
 .title-with-svg > * {
   display: inline-flex;
 }
